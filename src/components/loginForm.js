@@ -1,13 +1,27 @@
 import React, { useState } from "react"
 import styles from "./loginForm.module.css"
+import axios from "axios"
 
-const LoginForm = () => {
+const LoginForm = ({ storeToken }) => {
   const [name, setName] = useState("")
+  const handleSubmit = async event => {
+    event.preventDefault()
+    const result = await axios({
+      method: "POST",
+      url: "https://bubbles-peacock-4530.twil.io/create-token",
+      data: {
+        identity: name,
+      },
+    })
+    // console.log(result)
+    const jwt = result.data
+    storeToken(jwt)
+  }
   return (
     <section className={styles.contact}>
       <h3>Login</h3>
       <div className={styles.center}>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div>
             <label htmlFor="name"></label>
             Display Name: <br />
