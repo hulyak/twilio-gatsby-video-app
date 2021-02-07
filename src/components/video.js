@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from "react"
 import TwilioVideo from "twilio-video"
+import "./video.css"
 
-const Video = ({ token }) => {
+const Video = ({ token, name }) => {
   const localVideoRef = useRef()
   const remoteVideoRef = useRef()
 
@@ -30,8 +31,11 @@ const Video = ({ token }) => {
 
   return (
     <>
+      <h2>Organizer</h2>
       <div ref={localVideoRef} />
-      <div ref={remoteVideoRef} />
+      <h2>Remote Participants</h2>
+      <div ref={remoteVideoRef} className="remoteVideo" />
+      <p>Connected: {name}</p>
     </>
   )
 }
