@@ -3,6 +3,7 @@ import TwilioVideo from "twilio-video"
 
 const Video = ({ token }) => {
   const localVideoRef = useRef()
+  const remoteVideoRef = useRef()
 
   useEffect(() => {
     TwilioVideo.connect(token, { video: true, audio: true, name: "SVA" }).then(
@@ -10,10 +11,24 @@ const Video = ({ token }) => {
         TwilioVideo.createLocalVideoTrack().then(track => {
           localVideoRef.current.appendChild(track.attach())
         })
+        const addParticipant = participant => {
+          participant.tracks.forEach(publication => {
+            if (publication.isSubscribed) {
+              const track = publication.track
+              remoteVideoRef.current.appendChild(track.attach())
+            }
+          })
+        }
+        result.participants.forEach(addParticipant)
       }
     )
   }, [token])
 
-  return <div ref={localVideoRef} />
+  return (
+    <>
+      <div ref={localVideoRef} />
+      <div ref={remoteVideoRef} />
+    </>
+  )
 }
 export default Video
