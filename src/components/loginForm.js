@@ -4,6 +4,7 @@ import axios from "axios"
 
 const LoginForm = ({ storeToken, storeName }) => {
   const [name, setName] = useState("")
+
   const handleSubmit = async event => {
     event.preventDefault()
     const result = await axios({
@@ -13,7 +14,7 @@ const LoginForm = ({ storeToken, storeName }) => {
         identity: name,
       },
     })
-    // console.log(result)
+    console.log(result)
     const jwt = result.data
     storeToken(jwt)
     storeName(name)
