@@ -39,9 +39,8 @@ const Layout = ({ children }) => {
             marginTop: `2rem`,
           }}
         >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          Copyright © <a href="https://github.com/hulyak">Video App</a>,{" "}
+          {new Date().getFullYear()}, All rights reserved
         </footer>
       </div>
     </>
