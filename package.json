@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "twilio gatsby video chat app",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "twilio gatsby video chat app",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Hulya Karakaya",
   "dependencies": {
     "axios": "^0.21.1",
     "gatsby": "^2.31.1",

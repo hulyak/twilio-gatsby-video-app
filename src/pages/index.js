@@ -5,8 +5,8 @@ import LoginForm from "../components/loginForm"
 import Video from "../components/video"
 
 const IndexPage = () => {
-  const [token, setToken] = useState(false)
-  const [name, setName] = useState(false)
+  const [token, setToken] = useState(null)
+  const [name, setName] = useState("")
 
   return (
     <Layout>

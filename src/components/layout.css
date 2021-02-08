@@ -6,11 +6,11 @@
 }
 
 :root {
-  --primaryColor: #243e36;
+  --primaryColor: #833471;
   --mainGrey: #f9f9fa;
   --mainWhite: #fff;
   --mainBlack: #0a0a0a;
-  --darkGrey: #8e8e8e;
+  --darkGrey: #d980fa;
   --mainTransition: all 0.3s linear;
   --mainSpacing: 4px;
 }
@@ -18,10 +18,10 @@
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font: 112.5%/1.45em georgia, serif, sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
+
 body {
   font-family: "Quicksand", sans-serif;
   font-size: 18px;
@@ -31,8 +31,19 @@ body {
 }
 
 footer {
+  background: #fda7df;
+  color: #fff;
+  /* position: absolute; */
+  text-align: center;
+  /* bottom: 0; */
+  width: 100%;
   margin-top: auto;
   padding: 2rem;
   text-align: center;
   color: var(--mainBlack);
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
 }
