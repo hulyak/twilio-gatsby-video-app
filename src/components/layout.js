@@ -29,8 +29,8 @@ const Layout = ({ children }) => {
       <div>
         <main>{children}</main>
         <footer>
-          Copyright © <a href="https://github.com/hulyak">Video App</a>,{" "}
-          {new Date().getFullYear()}, All rights reserved
+          Copyright © <a href="https://github.com/hulyak">Video App</a>{" "}
+          {new Date().getFullYear()}. All rights reserved
         </footer>
       </div>
     </>
